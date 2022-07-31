@@ -42,5 +42,5 @@ sass/
 |   ...                  # Etc…
 |
 |
-`– style.scss            # Primary Sass file
+`– main.scss            # Primary Sass file
 ```
