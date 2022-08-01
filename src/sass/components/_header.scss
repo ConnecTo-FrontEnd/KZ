@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  height: $header-height;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
