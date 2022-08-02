@@ -1,1 +1,4 @@
-// unit rem
+@mixin marginAuto() {
+  margin-left: auto;
+  margin-right: auto;
+}
