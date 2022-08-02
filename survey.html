@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/style/main.css" />
+</head>
+
+<body>
+
+  <section class="machine_body">
+    <h2 class="sr-only"></h2>
+    <div class="inside_glass">
+      <div class="survey_question">
+        파티나 행사에서 새로운 사람에게 먼저 자신을 소개하기보다는 주로 이미 알고 있는 사람과 대화하는 편이다.
+      </div>
+    </div>
+    <div class="glass"><button class="resetBtn">reset</button></div>
+    <div class="btn_container">
+      <div class="buttons">
+        <div class="btn_row yes_btn">YES</div>
+        <div class="btn_row no_btn">NO</div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="slot">
+      </div>
+      <div id="slot" class="img">
+        <img id="soda" src="https://assets.codepen.io/2970881/pink_r.png" />
+      </div>
+      <div class="insert">
+        <h1>CASH</h1>
+      </div>
+
+    </div>
+
+  </section>
+  <div class="modal">
+    <button class="close">X</button>
+    <div class="modalContent"></div>
+  </div>
+  <script src="./src/machine.js"></script>
+</body>
+
+</html>
