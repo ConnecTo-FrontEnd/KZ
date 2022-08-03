@@ -347,24 +347,41 @@ legend {
   position: fixed;
   display: flex;
   width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding: 0.9375rem 2.8125rem;
   background-color: #484848;
   justify-content: space-between;
   align-items: center;
-  height: 3rem;
+  height: 5.625rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: white;
   z-index: 1;
 }
 
-.navigation__list {
-  display: flex;
-  gap: 1rem;
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 768px) {
+  .buttonWrapper {
+    display: none;
+  }
 }
 
 .main {
-  padding-top: 3rem;
+  padding-top: 5.625rem;
 }
 .main .energy-drink,
 .main .coffee,
@@ -379,7 +396,7 @@ legend {
   margin-right: auto;
   max-width: 64rem;
   width: 100%;
-  padding-top: 6rem;
+  padding-top: 11.25rem;
 }
 
 .energy-drink__top5,

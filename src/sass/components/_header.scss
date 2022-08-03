@@ -3,8 +3,7 @@
   position: fixed;
   display: flex;
   width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding: rem(15px) rem(45px);
   background-color: $primary-color;
   justify-content: space-between;
   align-items: center;
@@ -14,9 +13,27 @@
   z-index: 1;
 }
 
+h1{
+  @include desktop{
+    font-size: rem(24px);
+    font-weight: 700;
+  }
+}
+
 .navigation {
-  &__list {
-    display: flex;
-    gap: 1rem;
+  @include desktop{
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(20px);
+      font-size: rem(24px);
+      font-weight: 700;
+    }
+  }
+}
+
+.buttonWrapper{
+  @include desktop{
+    display: none;
   }
 }
