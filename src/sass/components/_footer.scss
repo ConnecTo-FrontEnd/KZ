@@ -1,0 +1,48 @@
+@use "../abstracts/" as *;
+
+.footer{
+  padding: rem(62px) 0;
+  background: #d5d5d5;
+  text-align: center;
+
+  @include mobile{
+    padding: rem(50px) 0;
+  }
+  
+  h1{
+    font-weight: 700;
+
+    @include mobile{
+      font-size: rem(24px);
+      margin-bottom: rem(15px);
+    }
+
+    @include desktop{
+      font-size: rem(32px);
+      margin-bottom: rem(25px);
+    }
+  }
+}
+
+
+.address{
+  @include mobile{
+    font-size: rem(16px);
+    margin-bottom: rem(15px);
+  }
+
+  @include desktop{
+    font-size: rem(24px);
+    margin-bottom: rem(25px);
+  }
+}
+
+small{
+  display: block;
+  font-size: rem(20px);
+  line-height: 1.5;
+
+  @include mobile{
+    font-size: rem(12px);
+  }
+}
