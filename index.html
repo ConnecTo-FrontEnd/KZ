@@ -25,7 +25,9 @@
         </ul>
       </nav>
     </header>
+
     <!-- <section class="banner">
+      <h2 class="sr-only">배너</h2>
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">Slide 1</div>
@@ -39,17 +41,24 @@
       </div>
     </section> -->
     <section class="recommend">
-      <h2 class="recommend__title">
+      <h2 class="a11yHidden">배너</h2>
+      <p class="recommend__title">
         나에게 맞는 드링크가 무엇일지 궁금하신가요?
-      </h2>
-      <!-- <div class="recommend__detail"> -->
-      <img class="recommend__img" src="./src/assets/human.jpg" alt="" />
-
-      <p class="recommend__description">
-        아래 간단한 설문을 통해 알아보고 추천받을 수 있어요!
       </p>
-      <a href="/recommend" class="link-recommend"> 설문 바로가기</a>
-      <!-- </div> -->
+
+      <div class="recommend__info">
+        <img class="recommend__img" src="./src/assets/human.jpg" alt="" />
+
+        <div class="recommend__detail">
+          <p class="recommend__description">
+            <span>아래 <strong>간단한 설문</strong>을 통해</span>
+            <span>알아보고 추천받을 수 있어요!</span>
+          </p>
+          <a href="/recommend" role="button" class="link--recommend">
+            추천 바로가기</a
+          >
+        </div>
+      </div>
     </section>
 
     <section class="top3">
