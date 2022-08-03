@@ -1,0 +1,99 @@
+@use "../abstracts/" as *;
+.sale {
+  padding-bottom: 5rem;
+  background-color: $primary-color;
+  position: relative;
+  max-width: $max-width;
+  @include marginAuto;
+  &__title {
+    font-size: rem(32px);
+    color: white;
+    margin-bottom: rem(25px);
+    text-align: center;
+  }
+  &__more {
+    display: block;
+    width: rem(200px);
+    height: rem(60px);
+    color: white;
+    font-size: rem(24px);
+    line-height: rem(60px);
+    border: 3px solid white;
+    border-radius: rem(16px);
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  &__img {
+    width: 30%;
+    height: 30%;
+    float: left;
+    padding-bottom: 2rem;
+    padding-right: 0.4rem;
+  }
+  &__description {
+    background-color: white;
+    display: flow-root;
+    border: #01b0d0 1px solid;
+    position: relative;
+    padding: 0.5rem;
+  }
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.875rem;
+    @include desktop {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  &__item {
+    margin-bottom: 2rem;
+    width: 45%;
+    @include mobile {
+      width: 100%;
+    }
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  &__oneplusone,
+  &__nice,
+  &__comment {
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    margin-left: 0.3rem;
+  }
+  &__oneplusone {
+    background: #01b0d0;
+  }
+  &__nice {
+    background: red;
+  }
+  &__comment {
+    background: black;
+  }
+  &__badge {
+    position: absolute;
+    bottom: 0;
+    left: 0.2rem;
+    transform: translateY(-50%);
+  }
+  &__header {
+    padding: 0.5rem;
+    background-color: $secondary-color;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+  }
+  &__product-name {
+    font-size: $text-xl;
+    font-weight: 700;
+    padding-bottom: 0.7rem;
+  }
+  &__product-price {
+    font-size: $text-lg;
+  }
+}

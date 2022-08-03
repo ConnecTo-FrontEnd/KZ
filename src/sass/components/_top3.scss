@@ -1,0 +1,161 @@
+@use "../abstracts/" as *;
+
+button {
+  cursor: pointer;
+}
+
+.top3 {
+  position: relative;
+  background: $primary-color;
+  text-align: center;
+  &__title {
+    font-size: rem(32px);
+    color: white;
+    margin-bottom: rem(25px);
+  }
+  &__explanation {
+    color: white;
+    font-size: 24px;
+    margin-bottom: rem(20px);
+  }
+  &__standard__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: rem(16px);
+    font-size: rem(20px);
+    margin-bottom: rem(31px);
+  }
+
+  &__list {
+    padding-bottom: rem(20px);
+    margin-bottom: rem(30px);
+    @include mobile {
+      overflow: scroll;
+      gap: 50px;
+      justify-content: center;
+    }
+    @include desktop {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+    }
+    li {
+      position: relative;
+    }
+  }
+
+  &__item {
+    width: rem(270px);
+    height: rem(400px);
+    border: 2px solid skyblue;
+    border-radius: rem(16px);
+    padding: 20px;
+    @include mobile {
+      margin-bottom: rem(30px);
+    }
+  }
+
+  &__item__first {
+    background-image: url(../assets/drink_KZ.png);
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: 45% 70%;
+  }
+
+  &__item__second {
+    background-image: url(../assets/drink_redbull.png);
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: 30% 60%;
+  }
+  &__item__third {
+    background-image: url(../assets/drink_monster.png);
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: 35% 70%;
+  }
+
+  &__item__name {
+    position: absolute;
+    left: 50%;
+    font-size: rem(24px);
+    transform: translateX(-50%);
+    @include mobile {
+      bottom: rem(60px);
+    }
+    @include desktop {
+      bottom: rem(40px);
+    }
+  }
+
+  &__item__detail {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border: 2px solid transparent;
+    border-radius: rem(16px);
+    color: #292929;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    font-size: rem(19px);
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    @include mobile {
+      width: rem(270px);
+      height: rem(396px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include desktop {
+      width: 100%;
+    }
+    dl {
+      width: rem(180px);
+      display: flex;
+      flex-flow: row wrap;
+
+      dt {
+        display: inline-block;
+        width: 50%;
+      }
+      dd {
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 20px;
+      }
+    }
+    &.is--active {
+      opacity: 1;
+    }
+  }
+
+  &__item__more {
+    display: block;
+    width: rem(200px);
+    height: rem(60px);
+    color: white;
+    font-size: rem(24px);
+    line-height: rem(60px);
+    border: 3px solid white;
+    border-radius: rem(16px);
+    margin: 0 auto;
+  }
+}
+
+.top3__standard__item {
+  button {
+    display: block;
+    width: rem(147px);
+    height: rem(40px);
+    border: 2px solid white;
+    background-color: $primary-color;
+    border-radius: rem(20px);
+    color: white;
+  }
+  .is--active {
+    background-color: cornflowerblue;
+  }
+}

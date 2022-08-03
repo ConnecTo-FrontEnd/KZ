@@ -343,28 +343,8 @@ legend {
   margin: -1px;
 }
 
-.header {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  background-color: #484848;
-  justify-content: space-between;
-  align-items: center;
-  height: 3rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  color: white;
-  z-index: 1;
-}
-
-.navigation__list {
-  display: flex;
-  gap: 1rem;
-}
-
 .main {
-  padding-top: 3rem;
+  padding-top: 5.625rem;
 }
 .main .energy-drink,
 .main .coffee,
@@ -374,12 +354,12 @@ legend {
 
 .recommend,
 .top3,
-.cheapest {
+.sale {
   margin-left: auto;
   margin-right: auto;
   max-width: 64rem;
   width: 100%;
-  padding-top: 6rem;
+  padding-top: 11.25rem;
 }
 
 .energy-drink__top5,
@@ -398,31 +378,270 @@ legend {
   height: 300px;
 }
 
-.link-recommend {
-  background-color: black;
-  padding: 1rem;
+button {
+  cursor: pointer;
+}
+
+.top3 {
+  position: relative;
+  background: #484848;
+  text-align: center;
+}
+.top3__title {
+  font-size: 2rem;
   color: white;
-  display: inline-block;
+  margin-bottom: 1.5625rem;
 }
-
-.redbull,
-.monster {
-  width: 100px;
-  height: 100px;
-  background-size: contain;
+.top3__explanation {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 1.25rem;
 }
-
-.redbull {
-  background-image: url("../assets/redbull.jpg");
-}
-
-.monster {
-  background-image: url("../assets/monster.jpg");
-}
-
-.top3__list {
+.top3__standard__list {
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  margin-bottom: 1.9375rem;
+}
+.top3__list {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.875rem;
+}
+@media (max-width: 767px) {
+  .top3__list {
+    overflow: scroll;
+    gap: 50px;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .top3__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+}
+.top3__list li {
+  position: relative;
+}
+.top3__item {
+  width: 16.875rem;
+  height: 25rem;
+  border: 2px solid skyblue;
+  border-radius: 1rem;
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .top3__item {
+    margin-bottom: 1.875rem;
+  }
+}
+.top3__item__first {
+  background-image: url(../assets/drink_KZ.png);
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: 45% 70%;
+}
+.top3__item__second {
+  background-image: url(../assets/drink_redbull.png);
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: 30% 60%;
+}
+.top3__item__third {
+  background-image: url(../assets/drink_monster.png);
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: 35% 70%;
+}
+.top3__item__name {
+  position: absolute;
+  left: 50%;
+  font-size: 1.5rem;
+  transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  .top3__item__name {
+    bottom: 3.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .top3__item__name {
+    bottom: 2.5rem;
+  }
+}
+.top3__item__detail {
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  color: #292929;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .top3__item__detail {
+    width: 16.875rem;
+    height: 24.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 768px) {
+  .top3__item__detail {
+    width: 100%;
+  }
+}
+.top3__item__detail dl {
+  width: 11.25rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+.top3__item__detail dl dt {
+  display: inline-block;
+  width: 50%;
+}
+.top3__item__detail dl dd {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.top3__item__detail.is--active {
+  opacity: 1;
+}
+.top3__item__more {
+  display: block;
+  width: 12.5rem;
+  height: 3.75rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 3.75rem;
+  border: 3px solid white;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+
+.top3__standard__item button {
+  display: block;
+  width: 9.1875rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  background-color: #484848;
+  border-radius: 1.25rem;
+  color: white;
+}
+.top3__standard__item .is--active {
+  background-color: cornflowerblue;
+}
+
+.sale {
+  padding-bottom: 5rem;
+  background-color: #484848;
+  position: relative;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sale__title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5625rem;
+  text-align: center;
+}
+.sale__more {
+  display: block;
+  width: 12.5rem;
+  height: 3.75rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 3.75rem;
+  border: 3px solid white;
+  border-radius: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.sale__img {
+  width: 30%;
+  height: 30%;
+  float: left;
+  padding-bottom: 2rem;
+  padding-right: 0.4rem;
+}
+.sale__description {
+  background-color: white;
+  display: flow-root;
+  border: #01b0d0 1px solid;
+  position: relative;
+  padding: 0.5rem;
+}
+.sale__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.875rem;
+}
+@media (min-width: 768px) {
+  .sale__list {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+.sale__item {
+  margin-bottom: 2rem;
+  width: 45%;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+@media (max-width: 767px) {
+  .sale__item {
+    width: 100%;
+  }
+}
+.sale__oneplusone, .sale__nice, .sale__comment {
+  color: white;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  margin-left: 0.3rem;
+}
+.sale__oneplusone {
+  background: #01b0d0;
+}
+.sale__nice {
+  background: red;
+}
+.sale__comment {
+  background: black;
+}
+.sale__badge {
+  position: absolute;
+  bottom: 0;
+  left: 0.2rem;
+  transform: translateY(-50%);
+}
+.sale__header {
+  padding: 0.5rem;
+  background-color: #01afd1;
+  color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+.sale__product-name {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 0.7rem;
+}
+.sale__product-price {
+  font-size: 20px;
 }
 
 @keyframes drinkAni {
@@ -715,6 +934,145 @@ legend {
   display: inline-block;
   margin-top: 1.875rem;
   text-align: center;
+}
+
+.footer {
+  padding: 3.875rem 0;
+  background: #d5d5d5;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 3.125rem 0;
+  }
+}
+.footer h1 {
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .footer h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.9375rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5625rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .address {
+    font-size: 1rem;
+    margin-bottom: 0.9375rem;
+  }
+}
+@media (min-width: 768px) {
+  .address {
+    font-size: 1.5rem;
+    margin-bottom: 1.5625rem;
+  }
+}
+
+small {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  small {
+    font-size: 0.75rem;
+  }
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 0.9375rem 2.8125rem;
+  background-color: #484848;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.625rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: white;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .header {
+    height: 3.75rem;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 767px) {
+  .buttonWrapper {
+    display: block;
+  }
+  .buttonWrapper button {
+    position: relative;
+    width: 25px;
+    height: 18px;
+    display: block;
+    background: transparent;
+    border: none;
+  }
+  .buttonWrapper .button--burgerBarTop {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .buttonWrapper .button--burgerBarMiddle {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 1px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .buttonWrapper .button--burgerBarBottom {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .buttonWrapper {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

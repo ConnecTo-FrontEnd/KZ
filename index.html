@@ -15,19 +15,24 @@
   </head>
   <body>
     <header class="header">
-      <h1>KZ logo</h1>
+      <h1>Capain Zombie</h1>
       <nav class="navigation">
         <ul class="navigation__list">
-          <li><a href="">Home</a></li>
-          <li><a href="">ranknig</a></li>
-          <li><a href="">할인정보</a></li>
-          <li><a href="">test</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">RANKING</a></li>
+          <li><a href="#">SALE</a></li>
+          <li><a href="#">SURVEY</a></li>
         </ul>
       </nav>
+      <div class="buttonWrapper">
+        <button class="button--none button--burger" aria-label="메뉴 열기">
+          <span class="button--burgerBarTop"></span>
+          <span class="button--burgerBarMiddle"></span>
+          <span class="button--burgerBarBottom"></span>
+        </button>
+      </div>
     </header>
-
     <!-- <section class="banner">
-      <h2 class="sr-only">배너</h2>
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">Slide 1</div>
@@ -62,28 +67,183 @@
     </section>
 
     <section class="top3">
+      <h2 class="top3__title">이번주 Top 3</h2>
+      <p class="top3__explanation">
+        이미지를 누르시면 상세 정보를 보실 수 있습니다.
+      </p>
+      <ul class="top3__standard__list" role="tablist">
+        <li
+          class="top3__standard__item"
+          role="tab"
+          aria-selected="true"
+          aria-controls="tabpanel-1"
+        >
+          <button type="button" class="is--active">가격</button>
+        </li>
+        <li
+          class="top3__standard__item"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tabpanel-2"
+        >
+          <button type="button">칼로리</button>
+        </li>
+        <li
+          class="top3__standard__item"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tabpanel-3"
+        >
+          <button type="button">카페인</button>
+        </li>
+      </ul>
       <ol class="top3__list">
         <li>
-          <div class="redbull"></div>
-          <span> 레드불 </span>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
         </li>
         <li>
-          <div class="monster"></div>
-          <span> 레드불 </span>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
         </li>
         <li>
-          <div class="monster"></div>
-          <span> 레드불 </span>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
         </li>
       </ol>
+      <a href="/" class="top3__item__more">더보기</a>
     </section>
-    <section class="cheapest">
-      <ol class="">
-        <li class="first">레드불</li>
-        <li class="second">몬스터</li>
-        <li class="third">핫 식스</li>
-      </ol>
+
+    <section class="sale">
+      <h2 class="sale__title">편의점 할인 정보</h2>
+      <ul class="sale__list">
+        <li class="sale__item">
+          <a href="">
+            <div class="sale__redbull">
+              <div class="sale__header">
+                <span class="sale__store"> gs25 </span>
+                <span class="sale__date">08.01</span>
+                <span class="sale__category">음료</span>
+              </div>
+
+              <div class="sale__description">
+                <img class="sale__img" src="./src/assets/redbull.jpg" alt="" />
+                <div class="sale__product-name">
+                  Y)코리안좀비에너지드링크(로우)
+                </div>
+                <div class="sale__product-price">2,000원(1,000원)</div>
+                <div class="sale__badge">
+                  <span class="sale__oneplusone">1+1</span
+                  ><span class="sale__nice">개꿀</span
+                  ><span class="sale__comment">댓글(0)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="sale__item">
+          <a href="">
+            <div class="sale__redbull">
+              <div class="sale__header">
+                <span class="sale__store"> gs25 </span>
+                <span class="sale__date">08.01</span>
+                <span class="sale__category">음료</span>
+              </div>
+
+              <div class="sale__description">
+                <img class="sale__img" src="./src/assets/redbull.jpg" alt="" />
+                <div class="sale__product-name">
+                  Y)코리안좀비에너지드링크(로우)
+                </div>
+                <div class="sale__product-price">2,000원(1,000원)</div>
+                <div class="sale__badge">
+                  <span class="sale__oneplusone">1+1</span
+                  ><span class="sale__nice">개꿀</span
+                  ><span class="sale__comment">댓글(0)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- 
+          
+         -->
+        <li class="sale__item">
+          <a href="">
+            <div class="sale__redbull">
+              <div class="sale__header">
+                <span class="sale__store"> gs25 </span>
+                <span class="sale__date">08.01</span>
+                <span class="sale__category">음료</span>
+              </div>
+
+              <div class="sale__description">
+                <img class="sale__img" src="./src/assets/redbull.jpg" alt="" />
+                <div class="sale__product-name">
+                  Y)코리안좀비에너지드링크(로우)
+                </div>
+                <div class="sale__product-price">2,000원(1,000원)</div>
+                <div class="sale__badge">
+                  <span class="sale__oneplusone">1+1</span
+                  ><span class="sale__nice">개꿀</span
+                  ><span class="sale__comment">댓글(0)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <a href="" class="sale__more">더보기</a>
     </section>
+    <footer class="footer">
+      <h1>Capain Zombie</h1>
+      <address class="address">
+        <span>대표 : 김현진, 박지윤, 백남헌, 유은지, 전희준</span>
+      </address>
+      <small class="copyright__info"
+        >본 사이트는 상업적 목적이 아닌 프로젝트 페이지로 제작되었습니다.</small
+      >
+      <small class="copyright__info"
+        >일부 내용 및 폰트, 이미지 등은 그 출처가 따로 있음을 밝힙니다.</small
+      >
+      <small class="copyright"
+        >Copyright since &copy; 2010 by Web Cafe CORPORATION ALL RIGHTS
+        RESERVED.</small
+      >
+    </footer>
   </body>
 
   <script src="./src/swiper.js"></script>

@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 body {
-  // background-color: black;
+  // background-color:$primary-color
 }
 .main {
   padding-top: $header-height;
@@ -13,7 +13,7 @@ body {
 
 .recommend,
 .top3,
-.cheapest {
+.sale {
   @include marginAuto;
   max-width: $max-width;
   width: 100%;
