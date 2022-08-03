@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/style/main.css" />
+</head>
+
+<body>
+
+  <section class="machine">
+    <h2 class="sr-only">설문조사 자판기</h2>
+    <article class="machine__glass">
+      <h3 class="sr-only">설문조사 질문</h3>
+      <p class="machine__survey"></p>
+      <button class="machine__reset" aria-label="리셋 버튼">reset</button>
+    </article>
+
+    <ul class="buttons"> 
+      <li class="buttons__item"><button class="buttons__item__btn yes" aria-label="예 버튼">YES</button></li>
+      <li class="buttons__item"><button class="buttons__item__btn no" aria-label="아니오 버튼">NO</button></li>
+    </ul>
+
+    <!--의미 없이 디자인을 위한 마크업이기 때문에 읽어줄 필요가 없다고 생각-->
+    <div class="machine__bottom">
+      <div class="slot">
+      </div>
+      <div class="img">
+        <img id="soda" src="https://assets.codepen.io/2970881/pink_r.png" alt=''/>
+      </div>
+      <div class="insert">
+        <div class="cash" aria-hidden="true">CASH</div>
+      </div>
+    </div>
+  </section>
+  <article class="modal" role="dialog" aria-labelledby="drinkDetails" aria-modal="true">
+    <h3 id="drinkDetails" class="sr-only">드링크 상세 정보</h3>
+    <button class="modal__close">X</button>
+    <div class="modal__content"></div>
+  </article>
+  <script src="./src/machine.js"></script>
+</body>
+
+</html>
