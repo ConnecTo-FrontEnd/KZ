@@ -356,14 +356,22 @@ legend {
   color: white;
   z-index: 1;
 }
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
+@media (max-width: 767px) {
+  .header {
+    height: 3.75rem;
   }
 }
 
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .navigation__list {
     display: flex;
@@ -374,6 +382,50 @@ legend {
   }
 }
 
+@media (max-width: 767px) {
+  .buttonWrapper {
+    display: block;
+  }
+  .buttonWrapper button {
+    position: relative;
+    width: 25px;
+    height: 18px;
+    display: block;
+    background: transparent;
+    border: none;
+  }
+  .buttonWrapper .button--burgerBarTop {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .buttonWrapper .button--burgerBarMiddle {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 1px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .buttonWrapper .button--burgerBarBottom {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
 @media (min-width: 768px) {
   .buttonWrapper {
     display: none;

@@ -11,16 +11,22 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: white;
   z-index: 1;
-}
 
-h1{
-  @include desktop{
-    font-size: rem(24px);
-    font-weight: 700;
+  @include mobile{
+    height: rem(60px);
   }
 }
 
+h1{
+  font-size: rem(24px);
+  font-weight: 700;
+}
+
 .navigation {
+  @include mobile{
+    display: none;
+  }
+
   @include desktop{
     &__list {
       display: flex;
@@ -33,6 +39,52 @@ h1{
 }
 
 .buttonWrapper{
+  @include mobile{
+    display: block;
+    
+    button{
+      position: relative;
+      width: 25px;
+      height: 18px;
+      display: block;
+      background: transparent;
+      border: none;
+    }
+
+    .button--burgerBar{
+      &Top{
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 1px;
+        position: absolute;
+        top:0; left: 0;
+      }
+      
+      &Middle{
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 1px;
+        position: absolute;
+        left: 0;
+        top:50%; transform: translateY(-50%);
+      }
+      
+      &Bottom{
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 1px;
+        position: absolute;
+        bottom:0; left: 0;
+      }
+    }
+  }
+
   @include desktop{
     display: none;
   }
