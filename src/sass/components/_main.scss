@@ -10,18 +10,7 @@ body {
     padding-top: 1.5rem;
   }
 }
-.recommend {
-  min-height: 16rem;
-  position: relative;
-  &__title {
-    font-size: $font-size-h1;
-    text-align: center;
-    font-weight: 700;
-  }
-  &__img {
-    float: left;
-  }
-}
+
 .recommend,
 .top3,
 .cheapest {
