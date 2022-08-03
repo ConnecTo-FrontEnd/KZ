@@ -39,13 +39,13 @@ let obj = {
   },
 }
 
-let survey_question = document.querySelector('.survey_question');
-let buttons = document.querySelector('.buttons');
-let resetBtn = document.querySelector('.resetBtn');
-let soda = document.querySelector('#soda');
-let modal = document.querySelector('.modal');
-let close = document.querySelector('.close');
-let modalContent = document.querySelector('.modalContent');
+const survey_question = document.querySelector('.machine__survey');
+const buttons = document.querySelector('.buttons');
+const resetBtn = document.querySelector('.machine__reset');
+const soda = document.querySelector('#soda');
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.modal__close');
+const modalContent = document.querySelector('.modal__content');
 survey_question.innerHTML = obj.questions[0][0];  // 처음 질문
 
 let i = 0;  // 설문 번호
@@ -53,13 +53,13 @@ let weight = [0, 0, 0, 0];  // 가중치 => 카페인: 0, 할인: 1, 칼로리: 
 
 buttons.addEventListener('click', (e) => {
   
-  if (e.target.classList.contains('btn_row')) {
+  if (e.target.classList.contains('buttons__item__btn')) {
     if (i < obj.questions.length) {
-      if (e.target.classList.contains('yes_btn')) {
+      if (e.target.classList.contains('yes')) {
         // 가중치 더해줌
         weight[obj.questions[i][1]] += obj.questions[i][2]; // 가중치 더해줌
       }
-      else if (e.target.classList.contains('no_btn')) {
+      else if (e.target.classList.contains('no')) {
         // 딱히 뭐 안해줘도 될 듯
       }
       i++;

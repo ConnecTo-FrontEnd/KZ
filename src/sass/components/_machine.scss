@@ -30,7 +30,7 @@ $ddteal: #29b88c;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  .close {
+  .modal__close {
     position: absolute;
     top: 0;
     right: 0;
@@ -38,7 +38,7 @@ $ddteal: #29b88c;
   }
 }
 
-.machine_body {
+.machine {
   // 크기
   font-size: 1.3vmin;
 
@@ -58,7 +58,7 @@ $ddteal: #29b88c;
   border-radius: 7px;
   background: $dteal;
 
-  .inside_glass {
+  &__glass {
     position: relative;
     display: flex;
     align-items: center;
@@ -105,43 +105,12 @@ $ddteal: #29b88c;
     ;
     background-repeat: no-repeat;
 
-    .survey_question {
+    .machine__survey {
       font-size: 3.2em;
       text-align: center;
       margin: 0 2rem;
     }
-
-  }
-
-  .glass {
-    width: 61.5em;
-    height: 21.5em;
-    border-radius: 15px;
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translate(-50%, 0);
-    border-top: 2px solid rgba(#2e7672, 1);
-    border-left: 2px solid rgba(#2e7672, 1);
-    border-right: 2px solid rgba(#2e7672, 1);
-    background:
-      rgba(#fff, .2);
-    background-repeat: no-repeat;
-
-    &:after {
-      border-radius: 15px;
-      width: 61.5em;
-      height: 21.5em;
-      content: '';
-      position: absolute;
-      left: -.6%;
-      top: -2.5%;
-      border-top: 2px solid $teal;
-      border-left: 2px solid $teal;
-      border-right: 2px solid $teal;
-    }
-
-    .resetBtn {
+    .machine__reset {
       display: none;
       position: absolute;
       background: red;
@@ -151,50 +120,47 @@ $ddteal: #29b88c;
       transform: translate(-50%, -50%);
       z-index: 999;
     }
+
   }
 
-  .btn_container {
-    display: flex;
-    justify-content: center;
+
+  .buttons {
+    background: $dteal;
     z-index: 6;
     width: 100%;
     height: 8.5em;
-    background: $dteal;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 7px;
+    text-align: center;
+
     position: absolute;
     top: 40.5%;
 
     @include for-phone-only {
       top: 32%;
     }
-  }
 
-  .buttons {
-    background: $dteal;
-    width: 50em;
-    height: 8.5em;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 7px;
-    text-align: center;
-
-    .btn_row {
-      width: 40%;
+    &__item {
+      width: 20%;
       height: 100%;
-      
-      line-height: 8.5em;
-      &.yes_btn {
+      &__btn {
+        height: 100%;
+        width: 100%;
+      }
+      .yes {
         background: blue;
       }
-      &.no_btn {
+      .no {
         background: red;
       }
     }
 
   }
 
-  .bottom {
+  &__bottom {
     @include for-phone-only {
       top: 65em;
       height: 45em;
@@ -333,7 +299,7 @@ $ddteal: #29b88c;
       background-repeat: no-repeat;
     }
 
-    h1 {
+    .cash {
       font-weight: bolder;
       font-size: 1.5em;
       letter-spacing: 2px;
