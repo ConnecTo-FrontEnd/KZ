@@ -6,7 +6,7 @@ button {
 
 .top3 {
   position: relative;
-  background: $primary-color;
+
   text-align: center;
   &__title {
     font-size: rem(32px);
@@ -20,7 +20,7 @@ button {
   }
   &__standard__list {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     gap: rem(16px);
     font-size: rem(20px);
@@ -31,17 +31,22 @@ button {
     padding-bottom: rem(20px);
     margin-bottom: rem(30px);
     @include mobile {
-      overflow: scroll;
       gap: 50px;
       justify-content: center;
     }
     @include desktop {
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-around;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding-left: 5%;
+      padding-right: 5%;
     }
+
     li {
       position: relative;
+      @include tablet {
+        width: 100%;
+      }
     }
   }
 
@@ -51,9 +56,7 @@ button {
     border: 2px solid skyblue;
     border-radius: rem(16px);
     padding: 20px;
-    @include mobile {
-      margin-bottom: rem(30px);
-    }
+    margin-bottom: rem(30px);
   }
 
   &__item__first {
@@ -92,7 +95,8 @@ button {
   &__item__detail {
     opacity: 0;
     position: absolute;
-    height: 100%;
+    height: -webkit-fill-available;
+    margin-bottom: rem(30px);
     top: 0;
     border: 2px solid transparent;
     border-radius: rem(16px);
@@ -156,6 +160,8 @@ button {
     color: white;
   }
   .is--active {
-    background-color: cornflowerblue;
+    background-color: white;
+    color: black;
+    font-weight: 700;
   }
 }

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/main.css" />
+    <title>Rankinng</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">
+        <h1>Capain Zombie</h1>
+      </a>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li><a href="/ranking.html">RANKING</a></li>
+          <li><a href="/sale.html">SALE</a></li>
+          <li><a href="/survey.html">SURVEY</a></li>
+        </ul>
+      </nav>
+      <div class="buttonWrapper">
+        <button class="button--none button--burger" aria-label="메뉴 열기">
+          <span class="button--burgerBarTop"></span>
+          <span class="button--burgerBarMiddle"></span>
+          <span class="button--burgerBarBottom"></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="top3">
+      <h2 class="top3__title">이번주 Top 3</h2>
+      <p class="top3__explanation">
+        이미지를 누르시면 상세 정보를 보실 수 있습니다.
+      </p>
+      <ul class="top3__standard__list" role="tablist">
+        <li
+          class="top3__standard__item"
+          role="tab"
+          aria-selected="true"
+          aria-controls="tabpanel-1"
+        >
+          <button type="button" class="is--active">가격</button>
+        </li>
+        <li
+          class="top3__standard__item"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tabpanel-2"
+        >
+          <button type="button">칼로리</button>
+        </li>
+        <li
+          class="top3__standard__item"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tabpanel-3"
+        >
+          <button type="button">카페인</button>
+        </li>
+      </ul>
+      <ol class="top3__list">
+        <li>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__first">
+            <span class="top3__item__name"> 코리안 좀비 </span>
+          </button>
+          <div class="top3__item__detail is--active">
+            <dl>
+              <dt>제품명</dt>
+              <dd>코리안 좀비</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__second">
+            <span class="top3__item__name"> 레드불 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>레드불</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <button class="top3__item top3__item__third">
+            <span class="top3__item__name"> 몬스터 </span>
+          </button>
+          <div class="top3__item__detail">
+            <dl>
+              <dt>제품명</dt>
+              <dd>몬스터</dd>
+              <dt>칼로리</dt>
+              <dd>000kcal</dd>
+              <dt>가격</dt>
+              <dd>2000원</dd>
+            </dl>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer class="footer">
+      <h1>Capain Zombie</h1>
+      <address class="address">
+        <span>대표 : 김현진, 박지윤, 백남헌, 유은지, 전희준</span>
+      </address>
+      <small class="copyright__info"
+        >본 사이트는 상업적 목적이 아닌 프로젝트 페이지로 제작되었습니다.</small
+      >
+      <small class="copyright__info"
+        >일부 내용 및 폰트, 이미지 등은 그 출처가 따로 있음을 밝힙니다.</small
+      >
+      <small class="copyright"
+        >Copyright since &copy; 2010 by Web Cafe CORPORATION ALL RIGHTS
+        RESERVED.</small
+      >
+    </footer>
+  </body>
+
+  <script src="./main.js"></script>
+  <script src="./src/swiper.js"></script>
+</html>

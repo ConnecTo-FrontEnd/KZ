@@ -9,19 +9,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <title>Document</title>
+    <title>Captin Zombie</title>
   </head>
   <body>
     <header class="header">
-      <h1>Capain Zombie</h1>
+      <a href="/">
+        <h1>Capain Zombie</h1>
+      </a>
       <nav class="navigation">
         <ul class="navigation__list">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">RANKING</a></li>
-          <li><a href="#">SALE</a></li>
-          <li><a href="#">SURVEY</a></li>
+          <li><a href="/ranking.html">RANKING</a></li>
+          <li><a href="/sale.html">SALE</a></li>
+          <li><a href="/survey.html">SURVEY</a></li>
         </ul>
       </nav>
       <div class="buttonWrapper">
@@ -32,19 +32,7 @@
         </button>
       </div>
     </header>
-    <!-- <section class="banner">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
-      </div>
-    </section> -->
+
     <section class="recommend">
       <h2 class="a11yHidden">배너</h2>
       <p class="recommend__title">
@@ -59,7 +47,7 @@
             <span>아래 <strong>간단한 설문</strong>을 통해</span>
             <span>알아보고 추천받을 수 있어요!</span>
           </p>
-          <a href="/recommend" role="button" class="link--recommend">
+          <a href="/survey.html" role="button" class="link--recommend">
             추천 바로가기</a
           >
         </div>
@@ -144,7 +132,7 @@
           </div>
         </li>
       </ol>
-      <a href="/" class="top3__item__more">더보기</a>
+      <a href="/ranking.html" class="top3__item__more">더보기</a>
     </section>
 
     <section class="sale">
@@ -198,9 +186,7 @@
             </div>
           </a>
         </li>
-        <!-- 
-          
-         -->
+
         <li class="sale__item">
           <a href="">
             <div class="sale__redbull">
@@ -226,7 +212,7 @@
           </a>
         </li>
       </ul>
-      <a href="" class="sale__more">더보기</a>
+      <a href="/sale.html" class="sale__more">더보기</a>
     </section>
     <footer class="footer">
       <h1>Capain Zombie</h1>
@@ -245,6 +231,5 @@
       >
     </footer>
   </body>
-
-  <script src="./src/swiper.js"></script>
+  <script src="./main.js"></script>
 </html>

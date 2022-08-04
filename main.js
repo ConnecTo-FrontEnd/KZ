@@ -1,11 +1,11 @@
-const TITLE = "KZ";
-
-function inputTitle() {
-  document.querySelector(".header__logo").innerHTML = TITLE;
-}
-
 function init() {
-  inputTitle();
+  document
+    .querySelector(".buttonWrapper")
+    .addEventListener("click", () => toggleNavgigation());
+}
+function toggleNavgigation() {
+  document.querySelector(".navigation").classList.toggle("is--active");
+  document.querySelector(".button--none").classList.toggle("is--active");
 }
 
 init();

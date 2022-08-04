@@ -3,6 +3,7 @@ $breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
+
   xl: 1200px,
   xxl: 1400px,
 );
@@ -55,9 +56,14 @@ $breakpoints: (
 }
 
 $break: 768px;
-
+$tabletbreak: 1020px;
 @mixin mobile {
   @media (max-width: ($break - 1)) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: ($tabletbreak -1)) {
     @content;
   }
 }
