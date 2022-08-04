@@ -3,37 +3,37 @@
 let obj = {
   'questions' : [['오늘 달리실 예정이신가요?', 0, 10], ['돈이 얼마 남지 않으셨나요?', 1, 9], ['칼로리에 예민하신가요?', 2, 8], ['맛이 중요한가요?', 3, 7]], // 설문 내용, 가중치 종류, 가중치
   'drinks' : {
-    '몬스터' : {
+    '몬스터' : {// 칼로리
       'name' : '몬스터',
-      'img' : `url(./src/assets/drink_monster.png)`,
-      'caffeine' : 10,
+      'img' : `./src/assets/drink_monster.png`,
+      'caffeine' : 95,//mg
       'event' : 0,
-      'calorie' : 5,
-      'flavor' : 5,
+      'calorie' : 1000-11,//kcal
+      'flavor' : 3,
     },
-    '핫식스' : {
+    '핫식스' : {  // 이벤트
       'name' : '핫식스',
-      'img' : `url(./src/assets/drink_hotsix.png)`,
-      'caffeine' : 5,
-      'event' : 0,
-      'calorie' : 10,
-      'flavor' : 5,
-    },
-    '레드불' : {
-      'name' : '레드불',
-      'img' : `url(./src/assets/drink_redbull.png)`,
-      'caffeine' : 5,
+      'img' : `./src/assets/drink_hotsix.png`,
+      'caffeine' : 60,
       'event' : 2,
-      'calorie' : 5,
+      'calorie' : 1000-115,
+      'flavor' : 4,
+    },
+    '레드불' : {  // 맛
+      'name' : '레드불',
+      'img' : `./src/assets/drink_redbull.png`,
+      'caffeine' : 62.5,
+      'event' : 0,
+      'calorie' : 1000-160,
       'flavor' : 5,
     },
-    '코리안좀비' : {
+    '코리안좀비' : {  // 카페인
       'name' : '코리안좀비',
-      'img' : `url(./src/assets/drink_KZ.png)`,
-      'caffeine' : 5,
+      'img' : `./src/assets/drink_KZ.png`,
+      'caffeine' : 100,
       'event' : 1,
-      'calorie' : 5,
-      'flavor' : 10,
+      'calorie' : 1000-135,
+      'flavor' : 4,
     },
 
   },
@@ -43,14 +43,19 @@ const survey_question = document.querySelector('.machine__survey');
 const buttons = document.querySelector('.buttons');
 const resetBtn = document.querySelector('.machine__reset');
 const soda = document.querySelector('#soda');
+const modalback = document.querySelector('.modalback');
 const modal = document.querySelector('.modal');
 const close = document.querySelector('.modal__close');
+const modalImg = document.querySelector('.modal__img');
 const modalContent = document.querySelector('.modal__content');
-survey_question.innerHTML = obj.questions[0][0];  // 처음 질문
+const leftEyebrow = document.querySelector('.left .eyebrow');
+const rightEyebrow = document.querySelector('.right .eyebrow');
 
+survey_question.innerHTML = obj.questions[0][0];  // 처음 질문
+resetBtn.style.backgroundImage = `url(./src/assets/reset.png)`
 let i = 0;  // 설문 번호
 let weight = [0, 0, 0, 0];  // 가중치 => 카페인: 0, 할인: 1, 칼로리: 2, 맛: 3
-
+let eyebrowDeg = 0;
 buttons.addEventListener('click', (e) => {
   
   if (e.target.classList.contains('buttons__item__btn')) {
@@ -58,10 +63,14 @@ buttons.addEventListener('click', (e) => {
       if (e.target.classList.contains('yes')) {
         // 가중치 더해줌
         weight[obj.questions[i][1]] += obj.questions[i][2]; // 가중치 더해줌
+        eyebrowDeg += 10;
       }
       else if (e.target.classList.contains('no')) {
         // 딱히 뭐 안해줘도 될 듯
+        eyebrowDeg -= 10;
       }
+      leftEyebrow.style.transform = `rotate(${eyebrowDeg}deg)`;
+      rightEyebrow.style.transform = `rotate(${-eyebrowDeg}deg)`;
       i++;
       if (i != obj.questions.length) survey_question.innerHTML = obj.questions[i][0];  // 다음 질문 넣어주고
       else if (i == obj.questions.length) { // 리셋버튼
@@ -92,18 +101,21 @@ buttons.addEventListener('click', (e) => {
             }
           }
           console.log(selectedDrink)
+          modalImg.src = selectedDrink['img'];
+          modalImg.alt = selectedDrink['name'] + '이미지';
           modalContent.innerHTML = `
-          <div>name: ${selectedDrink['name']}<div>
-          <div>caffeine: ${selectedDrink['caffeine']}<div>
-          <div>event: ${selectedDrink['event']}<div>
-          <div>calorie: ${selectedDrink['calorie']}<div>
-          <div>flavor: ${selectedDrink['flavor']}<div>
+          <li><span>name:</span> <span class="modal__content__item">${selectedDrink['name']}</span></li>
+          <li><span>caffeine:</span> <span class="modal__content__item">${selectedDrink['caffeine']} mg</span></li>
+          <li><span>event:</span> <span class="modal__content__item">${selectedDrink['event'] == 2 ? '1 + 1' : selectedDrink['event'] == 1 ? '2 + 1' : '할인 상품 아님'}</span></li>
+          <li><span>calorie:</span> <span class="modal__content__item">${1000-selectedDrink['calorie']} kcal</span></li>
+          <li><span>flavor:</span> <span class="modal__content__item">${selectedDrink['flavor']} 점</span></li>
           `
+          
         // 음료 드랍
-        soda.style.backgroundImage  = selectedDrink['img'];
+        soda.style.backgroundImage  = `url(${selectedDrink['img']})`;
         soda.classList.add('drinkDrop');
         setTimeout(()=>{
-          modal.style.display = 'block';
+          modalback.style.display = 'block';
           
         },1200)
       }
@@ -113,6 +125,9 @@ buttons.addEventListener('click', (e) => {
 })
 
 resetBtn.addEventListener('click', (e) => {
+  eyebrowDeg = 0;
+  leftEyebrow.style.transform = `rotate(${eyebrowDeg}deg)`;
+  rightEyebrow.style.transform = `rotate(${-eyebrowDeg}deg)`;
   console.log('snfma')
   survey_question.innerHTML = obj.questions[0][0];  // 처음 질문
   i = 0;  // 설문 번호
@@ -122,5 +137,5 @@ resetBtn.addEventListener('click', (e) => {
 })
 
 close.addEventListener('click', () => {
-  modal.style.display = 'none';
+  modalback.style.display = 'none';
 })

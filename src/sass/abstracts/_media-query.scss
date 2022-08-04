@@ -91,3 +91,8 @@ $tabletbreak: 1020px;
     @error "미디어 유형이 유효하지 않습니다";
   }
 }
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
