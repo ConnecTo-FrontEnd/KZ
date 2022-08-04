@@ -1,8 +1,8 @@
 $t: transparent;
-$teal: #54D9D1;
+$teal: #54d9d1;
 $dteal: #43ada7;
-$pink: #F27A9B;
-$orange: #EB7131;
+$pink: #f27a9b;
+$orange: #eb7131;
 $do: #d96d8b;
 $bk: #fff;
 $ddteal: #29b88c;
@@ -70,39 +70,39 @@ $ddteal: #29b88c;
     top: 5%;
     transform: translate(-50%, 0);
     background:
-      // top bar      
-      linear-gradient(rgba(#dcdcdc, .5)40%,
-        // rgba(#dcdcdc,.0),
-        rgba($teal, .5)55%,
-        rgba($t, .3),
-      ) 51% 0% / 57.1em 20em,
-      // btm bar      
-      linear-gradient(to right,
-        rgba(#dcdcdc, .7) 50%,
-        rgba(#dcdcdc, .7) 51%,
-      ) 50.8% 100% / 47.2em 1.7em,
-      // left corner      
-      linear-gradient(to right,
-        rgba(#dcdcdc, .7) 20%, rgba($do, 0) 65%,
-      ) 97.5% 0% / .6em 20em,
-      linear-gradient(45deg,
-        rgba(#dcdcdc, .8) 42%,
-        rgba(#dcdcdc, .7) 43%,
-        rgba(#dcdcdc, .7) 44.5%,
-        rgba($t, .0) 45%,
-      ) 54.4em 106% / 15em 2.8em,
-      // left corner      
-      linear-gradient(to right,
-        rgba(#dcdcdc, .7) 20%, rgba($do, 0) 65%,
-      ) 3.6% 0% / .6em 20em,
-      linear-gradient(-45deg,
-        rgba(#dcdcdc, .8) 42%,
-        rgba(#dcdcdc, .7) 43%,
-        rgba(#dcdcdc, .7) 44.5%,
-        rgba($do, 0) 45%,
-      ) -7.75em 106% / 15em 2.8em,
-      rgba(#fff, .3);
-    ;
+      // top bar
+      linear-gradient(
+          rgba(#dcdcdc, 0.5) 40%,
+          // rgba(#dcdcdc,.0),
+          rgba($teal, 0.5) 55%,
+          rgba($t, 0.3)
+        )
+        51% 0% / 57.1em 20em,
+      // btm bar
+      linear-gradient(to right, rgba(#dcdcdc, 0.7) 50%, rgba(#dcdcdc, 0.7) 51%)
+        50.8% 100% / 47.2em 1.7em,
+      // left corner
+      linear-gradient(to right, rgba(#dcdcdc, 0.7) 20%, rgba($do, 0) 65%) 97.5%
+        0% / 0.6em 20em,
+      linear-gradient(
+          45deg,
+          rgba(#dcdcdc, 0.8) 42%,
+          rgba(#dcdcdc, 0.7) 43%,
+          rgba(#dcdcdc, 0.7) 44.5%,
+          rgba($t, 0) 45%
+        )
+        54.4em 106% / 15em 2.8em,
+      // left corner
+      linear-gradient(to right, rgba(#dcdcdc, 0.7) 20%, rgba($do, 0) 65%) 3.6%
+        0% / 0.6em 20em,
+      linear-gradient(
+          -45deg,
+          rgba(#dcdcdc, 0.8) 42%,
+          rgba(#dcdcdc, 0.7) 43%,
+          rgba(#dcdcdc, 0.7) 44.5%,
+          rgba($do, 0) 45%
+        ) -7.75em 106% / 15em 2.8em,
+      rgba(#fff, 0.3);
     background-repeat: no-repeat;
 
     .machine__survey {
@@ -120,9 +120,7 @@ $ddteal: #29b88c;
       transform: translate(-50%, -50%);
       z-index: 999;
     }
-
   }
-
 
   .buttons {
     background: $dteal;
@@ -157,7 +155,6 @@ $ddteal: #29b88c;
         background: red;
       }
     }
-
   }
 
   &__bottom {
@@ -178,12 +175,10 @@ $ddteal: #29b88c;
   .slot {
     @include for-phone-only {
       top: 67%;
-
     }
 
     z-index: 3;
-    font-family: 'Pacifico',
-    cursive;
+    font-family: "Pacifico", cursive;
     width: 27em;
     height: 13em;
     border: 2px solid $dteal;
@@ -193,10 +188,10 @@ $ddteal: #29b88c;
     left: 25%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-top:2px solid #2e7672;
+    border-top: 2px solid #2e7672;
     border-left: 1px solid #2e7672;
-    border-right:2px solid #2e7672;
-    box-shadow: inset 10px 10px 15px 8px rgba(#232323, .5);
+    border-right: 2px solid #2e7672;
+    box-shadow: inset 10px 10px 15px 8px rgba(#232323, 0.5);
     background-repeat: no-repeat;
 
     img {
@@ -208,7 +203,7 @@ $ddteal: #29b88c;
     }
 
     &:after {
-      content: '';
+      content: "";
       width: 27em;
       height: 7em;
       position: absolute;
@@ -239,17 +234,16 @@ $ddteal: #29b88c;
       left: 50%;
       position: absolute;
       top: 173%;
-      
     }
-    .drinkDrop {  // 음료 떨어지는 클래스
-      animation: .5s cubic-bezier(0.87, 0, 0.13, 1) .3s drinkAni forwards;
+    .drinkDrop {
+      // 음료 떨어지는 클래스
+      animation: 0.5s cubic-bezier(0.87, 0, 0.13, 1) 0.3s drinkAni forwards;
     }
   }
 
   .insert {
     @include for-phone-only {
       left: 75%;
-
     }
 
     font-family: arial;
@@ -266,24 +260,27 @@ $ddteal: #29b88c;
     background-repeat: no-repeat;
 
     &:before {
-      content: '';
-      width: .8em;
-      height: .8em;
+      content: "";
+      width: 0.8em;
+      height: 0.8em;
       position: absolute;
       top: 30%;
       left: 86%;
       transform: translate(-50%, -50%);
-      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px yellowgreen, 0 0 20px yellowgreen, 0 0 30px yellowgreen, 0 0 60px yellowgreen, 0 0 70px yellowgreen;
-      background:
-        linear-gradient(to top,
-          rgba(limegreen, 1), rgba(limegreen, 1),
-        ) 50% 0% / 100% 100%,
-      ;
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px yellowgreen,
+        0 0 20px yellowgreen, 0 0 30px yellowgreen, 0 0 60px yellowgreen,
+        0 0 70px yellowgreen;
+      background: linear-gradient(
+          to top,
+          rgba(limegreen, 1),
+          rgba(limegreen, 1)
+        )
+        50% 0% / 100% 100%;
       background-repeat: no-repeat;
     }
 
     &:after {
-      content: '';
+      content: "";
       width: 10em;
       height: 1.2em;
       border: 2px solid $dteal;
@@ -291,11 +288,8 @@ $ddteal: #29b88c;
       top: 65%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background:
-        linear-gradient(to top,
-          rgba(#4bc3bc, 1), rgba(#19413e, 1),
-        ) 50% 0% / 100% 100%,
-      ;
+      background: linear-gradient(to top, rgba(#4bc3bc, 1), rgba(#19413e, 1))
+        50% 0% / 100% 100%;
       background-repeat: no-repeat;
     }
 
@@ -304,8 +298,17 @@ $ddteal: #29b88c;
       font-size: 1.5em;
       letter-spacing: 2px;
       text-align: center;
-      margin-top: .6em;
+      margin-top: 0.6em;
     }
+  }
+}
 
+.buttons__item {
+  button {
+    border: 0;
+    font-size: 32px;
+  }
+  button:focus {
+    outline: 3px solid yellow;
   }
 }

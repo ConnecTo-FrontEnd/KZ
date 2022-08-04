@@ -105,6 +105,8 @@ button {
     display: flex;
     font-size: rem(19px);
     font-weight: 700;
+    word-break: keep-all;
+    white-space: nowrap;
     justify-content: center;
     align-items: center;
     @include mobile {
