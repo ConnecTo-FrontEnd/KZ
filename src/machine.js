@@ -5,7 +5,7 @@ let obj = {
   'drinks' : {
     '몬스터' : {
       'name' : '몬스터',
-      'img' : '이미지는 스프라이트 이미지로',
+      'img' : `url(./src/assets/drink_monster.png)`,
       'caffeine' : 10,
       'event' : 0,
       'calorie' : 5,
@@ -13,7 +13,7 @@ let obj = {
     },
     '핫식스' : {
       'name' : '핫식스',
-      'img' : '이미지는 스프라이트 이미지로',
+      'img' : `url(./src/assets/drink_hotsix.png)`,
       'caffeine' : 5,
       'event' : 0,
       'calorie' : 10,
@@ -21,7 +21,7 @@ let obj = {
     },
     '레드불' : {
       'name' : '레드불',
-      'img' : '이미지는 스프라이트 이미지로',
+      'img' : `url(./src/assets/drink_redbull.png)`,
       'caffeine' : 5,
       'event' : 2,
       'calorie' : 5,
@@ -29,7 +29,7 @@ let obj = {
     },
     '코리안좀비' : {
       'name' : '코리안좀비',
-      'img' : '이미지는 스프라이트 이미지로',
+      'img' : `url(./src/assets/drink_KZ.png)`,
       'caffeine' : 5,
       'event' : 1,
       'calorie' : 5,
@@ -68,11 +68,8 @@ buttons.addEventListener('click', (e) => {
         survey_question.innerHTML = '';
         resetBtn.style.display = 'block';
         console.log(i);
-        // 음료 드랍
-        soda.classList.add('drinkDrop');
-        setTimeout(()=>{
-          modal.style.display = 'block';
-          let max = 0;
+
+        let max = 0;
           let w;  // 어떤 가중치가 가장 큰지 / 카페인: 0, 할인: 1, 칼로리: 2, 맛: 3
           weight.forEach((e, i)  => {
             if (e > max) {  // 가중치가 가장 큰 카테고리가 무엇인지 구함
@@ -102,6 +99,12 @@ buttons.addEventListener('click', (e) => {
           <div>calorie: ${selectedDrink['calorie']}<div>
           <div>flavor: ${selectedDrink['flavor']}<div>
           `
+        // 음료 드랍
+        soda.style.backgroundImage  = selectedDrink['img'];
+        soda.classList.add('drinkDrop');
+        setTimeout(()=>{
+          modal.style.display = 'block';
+          
         },1200)
       }
     }
@@ -121,4 +124,3 @@ resetBtn.addEventListener('click', (e) => {
 close.addEventListener('click', () => {
   modal.style.display = 'none';
 })
-

@@ -15,10 +15,10 @@ $ddteal: #29b88c;
 
 @keyframes drinkAni {
   from {
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -120%) rotate(90deg);
   }
   to {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -42%) rotate(90deg);
   }
 }
 .modal {
@@ -199,14 +199,6 @@ $ddteal: #29b88c;
     box-shadow: inset 10px 10px 15px 8px rgba(#232323, .5);
     background-repeat: no-repeat;
 
-    img {
-      width: 9.5em;
-      transform: rotate(-90deg) translate(80%, -25%);
-      left: 50%;
-      position: absolute;
-      top: 50%;
-    }
-
     &:after {
       content: '';
       width: 27em;
@@ -229,16 +221,20 @@ $ddteal: #29b88c;
     height: 8em;
     left: 4%;
 
-    img {
+    #soda {
       @include for-phone-only {
         top: 390%;
       }
 
-      width: 18.5em;
-      transform: translate(-50%, -200%);
+      width: 7.5em;
+      height: 18.5em;
+      transform: translate(-50%, -120%) rotate(90deg);
       left: 50%;
       position: absolute;
       top: 173%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: right;
       
     }
     .drinkDrop {  // 음료 떨어지는 클래스
