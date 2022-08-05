@@ -437,7 +437,7 @@ button {
 .top3__list li {
   position: relative;
 }
-@media (max-width: 1020px -1) {
+@media (max-width: 1020px -1px) {
   .top3__list li {
     width: 100%;
   }
