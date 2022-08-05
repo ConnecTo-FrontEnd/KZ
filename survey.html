@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./src/style/main.css" />
   </head>
 
-  <body>
+  <body class="overflowHidden">
     <header class="header">
       <a href="/">
         <h1>Capain Zombie</h1>
@@ -28,21 +28,26 @@
         </button>
       </div>
     </header>
+    <div>
+      
+    </div>
     <section class="machine">
-      <h2 class="sr-only">설문조사 자판기</h2>
+      <h2 class="a11yHidden" >설문조사 자판기</h2>
       <article class="machine__glass">
-        <h3 class="sr-only">설문조사 질문</h3>
+        <h3 class="a11yHidden">설문조사 질문</h3>
         <p class="machine__survey"></p>
-        <button class="machine__reset" aria-label="리셋 버튼">reset</button>
+        <button class="machine__reset" aria-label="리셋 버튼"></button>
       </article>
 
       <ul class="buttons">
-        <li class="buttons__item">
+        <li class="buttons__item left">
+          <div class="eyebrow"></div>
           <button class="buttons__item__btn yes" aria-label="예 버튼">
             YES
           </button>
         </li>
-        <li class="buttons__item">
+        <li class="buttons__item right">
+          <div class="eyebrow"></div>
           <button class="buttons__item__btn no" aria-label="아니오 버튼">
             NO
           </button>
@@ -53,27 +58,27 @@
       <div class="machine__bottom">
         <div class="slot"></div>
         <div class="img">
-          <img
-            id="soda"
-            src="https://assets.codepen.io/2970881/pink_r.png"
-            alt=""
-          />
-        </div>
-        <div class="insert">
-          <div class="cash" aria-hidden="true">CASH</div>
+          <div id="soda"></div>
         </div>
       </div>
     </section>
-    <article
-      class="modal"
-      role="dialog"
-      aria-labelledby="drinkDetails"
-      aria-modal="true"
-    >
-      <h3 id="drinkDetails" class="sr-only">드링크 상세 정보</h3>
-      <button class="modal__close">X</button>
-      <div class="modal__content"></div>
-    </article>
+    <div class="modalback"> 
+      <article
+        class="modal"
+        role="dialog"
+        aria-labelledby="drinkDetails"
+        aria-modal="true"
+      >
+        <h3 id="drinkDetails" class="a11yHidden">드링크 상세 정보</h3>
+        <img class="modal__img" src="" alt="" />
+        <ul class="modal__content">
+          
+        </ul>
+        <button class="modal__close"></button>
+      </article>
+    </div>
+
+
     <script src="./src/machine.js"></script>
   </body>
 </html>
