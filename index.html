@@ -19,7 +19,7 @@
       </a>
       <nav class="navigation">
         <ul class="navigation__list">
-          <li><a href="/ranking.html">RANKING</a></li>
+          <li><a tabindex="0" href="/ranking.html">RANKING</a></li>
           <li><a href="/sale.html">SALE</a></li>
           <li><a href="/survey.html">SURVEY</a></li>
         </ul>
@@ -90,7 +90,7 @@
           <button class="top3__item top3__item__first">
             <span class="top3__item__name"> 코리안 좀비 </span>
           </button>
-          <div class="top3__item__detail is--active">
+          <div class="top3__item__detail">
             <dl>
               <dt>제품명</dt>
               <dd>코리안 좀비</dd>
@@ -215,7 +215,7 @@
       <a href="/sale.html" class="sale__more">더보기</a>
     </section>
     <footer class="footer">
-      <h1>Capain Zombie</h1>
+      <p>Capain Zombie</p>
       <address class="address">
         <span>대표 : 김현진, 박지윤, 백남헌, 유은지, 전희준</span>
       </address>
@@ -232,4 +232,23 @@
     </footer>
   </body>
   <script src="./main.js"></script>
+  <script>
+    const modal = document.querySelectorAll(".top3__item__detail");
+    const modalPopUp = (target) => {
+      if (target.classList.contains("is--active")) {
+        target.classList.remove("is--active");
+      } else {
+        target.classList.add("is--active");
+      }
+    };
+    modal.forEach((x) =>
+      x.addEventListener("click", () => {
+        if (x.classList.contains("is--active")) {
+          x.classList.remove("is--active");
+        } else {
+          x.classList.add("is--active");
+        }
+      })
+    );
+  </script>
 </html>
