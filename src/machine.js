@@ -20,7 +20,7 @@ let obj = {
     핫식스: {
       // 이벤트
       name: "핫식스",
-      img: `./src/assets/drink_hotsix.jpg`,
+      img: `./src/assets/drink_hotsix.png`,
       caffeine: 60,
       event: 2,
       calorie: 1000 - 115,
@@ -29,7 +29,7 @@ let obj = {
     레드불: {
       // 맛
       name: "레드불",
-      img: `./src/assets/drink_redbull.jpg`,
+      img: `./src/assets/drink_redbull.png`,
       caffeine: 62.5,
       event: 0,
       calorie: 1000 - 160,
@@ -38,7 +38,7 @@ let obj = {
     코리안좀비: {
       // 카페인
       name: "코리안좀비",
-      img: `./src/assets/drink_KZ.jpg`,
+      img: `./src/assets/drink_KZ.png`,
       caffeine: 100,
       event: 1,
       calorie: 1000 - 135,
