@@ -34,10 +34,10 @@ let obj = {
       'event' : 1,
       'calorie' : 1000-135,
       'flavor' : 4,
-    },
 
+    },
   },
-}
+};
 
 const survey_question = document.querySelector('.machine__survey');
 const buttons = document.querySelector('.buttons');
@@ -60,7 +60,7 @@ buttons.addEventListener('click', (e) => {
   
   if (e.target.classList.contains('buttons__item__btn')) {
     if (i < obj.questions.length) {
-      if (e.target.classList.contains('yes')) {
+      if (e.target.classList.contains("yes")) {
         // 가중치 더해줌
         weight[obj.questions[i][1]] += obj.questions[i][2]; // 가중치 더해줌
         eyebrowDeg += 10;
@@ -72,10 +72,15 @@ buttons.addEventListener('click', (e) => {
       leftEyebrow.style.transform = `rotate(${eyebrowDeg}deg)`;
       rightEyebrow.style.transform = `rotate(${-eyebrowDeg}deg)`;
       i++;
-      if (i != obj.questions.length) survey_question.innerHTML = obj.questions[i][0];  // 다음 질문 넣어주고
-      else if (i == obj.questions.length) { // 리셋버튼
-        survey_question.innerHTML = '';
-        resetBtn.style.display = 'block';
+      if (i != obj.questions.length) {
+        survey_question.innerHTML = obj.questions[i][0];
+        console.log(document.querySelector(".machine__survey"));
+        document.querySelector(".machine__survey").focus();
+      } // 다음 질문 넣어주고
+      else if (i == obj.questions.length) {
+        // 리셋버튼
+        survey_question.innerHTML = "";
+        resetBtn.style.display = "block";
         console.log(i);
 
         let max = 0;
@@ -85,19 +90,24 @@ buttons.addEventListener('click', (e) => {
               max = e;
               w = i;
             }
-          })
+          });
           let category;
-          if (w == 0) {category = 'caffeine'} 
-          else if (w == 1) {category = 'event'} 
-          else if (w == 2) {category = 'calorie'} 
-          else if (w == 3) {category = 'flavor'} 
+          if (w == 0) {
+            category = "caffeine";
+          } else if (w == 1) {
+            category = "event";
+          } else if (w == 2) {
+            category = "calorie";
+          } else if (w == 3) {
+            category = "flavor";
+          }
 
           max = 0;
-          let selectedDrink;  
-          for (let key in obj['drinks']) {
-            if (obj['drinks'][key][category] > max) {
-              max = obj['drinks'][key][category];
-              selectedDrink = obj['drinks'][key];
+          let selectedDrink;
+          for (let key in obj["drinks"]) {
+            if (obj["drinks"][key][category] > max) {
+              max = obj["drinks"][key][category];
+              selectedDrink = obj["drinks"][key];
             }
           }
           console.log(selectedDrink)
@@ -110,7 +120,7 @@ buttons.addEventListener('click', (e) => {
           <li><span>calorie:</span> <span class="modal__content__item">${1000-selectedDrink['calorie']} kcal</span></li>
           <li><span>flavor:</span> <span class="modal__content__item">${selectedDrink['flavor']} 점</span></li>
           `
-          
+          document.querySelector(".modal__content").focus();
         // 음료 드랍
         soda.style.backgroundImage  = `url(${selectedDrink['img']})`;
         soda.classList.add('drinkDrop');
@@ -120,9 +130,10 @@ buttons.addEventListener('click', (e) => {
         },1200)
       }
     }
-    console.log(i, weight)
+
+    // document.querySelector(".modal__content__start").focus();
   }
-})
+});
 
 resetBtn.addEventListener('click', (e) => {
   eyebrowDeg = 0;
@@ -134,6 +145,7 @@ resetBtn.addEventListener('click', (e) => {
   weight = [0, 0, 0, 0];
   resetBtn.style.display = 'none';
   soda.classList.remove('drinkDrop');
+  document.querySelector(".machine__survey").focus();
 })
 
 close.addEventListener('click', () => {
