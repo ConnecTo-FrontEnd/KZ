@@ -5,6 +5,13 @@
   position: relative;
   max-width: $max-width;
   @include marginAuto;
+  &__store {
+    padding-left: 1rem;
+    float: right;
+  }
+  &__date {
+    float: right;
+  }
   &__title {
     font-size: rem(32px);
     color: white;
