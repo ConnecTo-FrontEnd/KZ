@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+button:focus {
+  outline: 5px solid violet;
+}
+a:focus {
+  outline: 4px solid violet;
+}

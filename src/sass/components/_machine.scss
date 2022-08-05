@@ -187,9 +187,7 @@ $do: #d96d8b;
       transform: translate(-50%, -50%);
       z-index: 999;
     }
-
   }
-
 
   .buttons {
     background: $pink;
@@ -232,7 +230,6 @@ $do: #d96d8b;
         top: -40%;
       }
     }
-
   }
 
   &__bottom {
@@ -253,12 +250,10 @@ $do: #d96d8b;
   .slot {
     @include for-phone-only {
       top: 67%;
-
     }
 
     z-index: 3;
-    font-family: 'Pacifico',
-    cursive;
+    font-family: "Pacifico", cursive;
     width: 27em;
     height: 13em;
     border: 2px solid $pink;
@@ -275,7 +270,7 @@ $do: #d96d8b;
     background-repeat: no-repeat;
 
     &:after {
-      content: '';
+      content: "";
       width: 27em;
       height: 7em;
       position: absolute;
@@ -312,8 +307,9 @@ $do: #d96d8b;
       background-position-x: right;
       
     }
-    .drinkDrop {  // 음료 떨어지는 클래스
-      animation: .5s cubic-bezier(0.87, 0, 0.13, 1) .3s drinkAni forwards;
+    .drinkDrop {
+      // 음료 떨어지는 클래스
+      animation: 0.5s cubic-bezier(0.87, 0, 0.13, 1) 0.3s drinkAni forwards;
     }
   }
 }

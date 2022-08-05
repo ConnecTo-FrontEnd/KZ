@@ -4,7 +4,9 @@
   padding: rem(62px) 0;
   background: #d5d5d5;
   text-align: center;
-
+  p {
+    font-size: rem(40px);
+  }
   @include mobile {
     padding: rem(50px) 0;
   }

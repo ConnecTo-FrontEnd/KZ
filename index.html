@@ -19,9 +19,9 @@
       </a>
       <nav class="navigation">
         <ul class="navigation__list">
-          <li><a href="/ranking.html">RANKING</a></li>
-          <li><a href="/sale.html">SALE</a></li>
-          <li><a href="/survey.html">SURVEY</a></li>
+          <li><a tabindex="0" href="/KZ/ranking.html">RANKING</a></li>
+          <li><a href="/KZ/sale.html">SALE</a></li>
+          <li><a href="/KZ/survey.html">SURVEY</a></li>
         </ul>
       </nav>
       <div class="buttonWrapper">
@@ -47,7 +47,7 @@
             <span>아래 <strong>간단한 설문</strong>을 통해</span>
             <span>알아보고 추천받을 수 있어요!</span>
           </p>
-          <a href="/survey.html" role="button" class="link--recommend">
+          <a href="/KZ/survey.html" role="button" class="link--recommend">
             추천 바로가기</a
           >
         </div>
@@ -90,7 +90,7 @@
           <button class="top3__item top3__item__first">
             <span class="top3__item__name"> 코리안 좀비 </span>
           </button>
-          <div class="top3__item__detail is--active">
+          <div class="top3__item__detail">
             <dl>
               <dt>제품명</dt>
               <dd>코리안 좀비</dd>
@@ -132,14 +132,14 @@
           </div>
         </li>
       </ol>
-      <a href="/ranking.html" class="top3__item__more">더보기</a>
+      <a href="/KZ/ranking.html" class="top3__item__more">더보기</a>
     </section>
 
     <section class="sale">
       <h2 class="sale__title">편의점 할인 정보</h2>
       <ul class="sale__list">
         <li class="sale__item">
-          <a href="">
+          <a href="/">
             <div class="sale__redbull">
               <div class="sale__header">
                 <span class="sale__store"> gs25 </span>
@@ -148,7 +148,75 @@
               </div>
 
               <div class="sale__description">
-                <img class="sale__img" src="./src/assets/redbull.jpg" alt="" />
+                <picture>
+                  <source
+                    media="(max-width:799px)"
+                    type="image/webp"
+                    srcset="./src/assets/drink_redbull@m.webp"
+                  />
+                  <source
+                    media="(min-width:800px)"
+                    type="image/webp"
+                    srcset="./src/assets/drink_redbull.webp"
+                  />
+                  <source
+                    media="(max-width:799px)"
+                    type="image/jpg"
+                    srcset="./src/assets/drink_redbull@m.jpg"
+                  />
+                  <source
+                    media="(min-width:800px)"
+                    type="image/jpg"
+                    srcset="./src/assets/drink_redbull.jpg"
+                  />
+                  <img class="sale__img" src="./src/assets/drink_redbull.jpg" />
+                </picture>
+
+                <div class="sale__product-name">레드불</div>
+                <div class="sale__product-price">2,000원(1,000원)</div>
+                <div class="sale__badge">
+                  <span class="sale__oneplusone">1+1</span
+                  ><span class="sale__nice">개꿀</span
+                  ><span class="sale__comment">댓글(0)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="sale__item">
+          <a href="/">
+            <div class="sale__redbull">
+              <div class="sale__header">
+                <span class="sale__store"> gs25 </span>
+                <span class="sale__date">08.01</span>
+                <span class="sale__category">음료</span>
+              </div>
+
+              <div class="sale__description">
+                <picture>
+                  <source
+                    media="(max-width:799px)"
+                    type="image/webp"
+                    srcset="./src/assets/drink_KZ@m.webp"
+                  />
+                  <source
+                    media="(min-width:800px)"
+                    type="image/webp"
+                    srcset="./src/assets/drink_KZ.webp"
+                  />
+                  <source
+                    media="(max-width:799px)"
+                    type="image/jpg"
+                    srcset="./src/assets/drink_KZ@m.jpg"
+                  />
+                  <source
+                    media="(min-width:800px)"
+                    type="image/jpg"
+                    srcset="./src/assets/drink_KZ.jpg"
+                  />
+                  <img class="sale__img" src="./src/assets/drink_KZ.jpg" />
+                </picture>
+
                 <div class="sale__product-name">
                   Y)코리안좀비에너지드링크(로우)
                 </div>
@@ -162,8 +230,9 @@
             </div>
           </a>
         </li>
+
         <li class="sale__item">
-          <a href="">
+          <a href="/">
             <div class="sale__redbull">
               <div class="sale__header">
                 <span class="sale__store"> gs25 </span>
@@ -172,32 +241,29 @@
               </div>
 
               <div class="sale__description">
-                <img class="sale__img" src="./src/assets/redbull.jpg" alt="" />
-                <div class="sale__product-name">
-                  Y)코리안좀비에너지드링크(로우)
-                </div>
-                <div class="sale__product-price">2,000원(1,000원)</div>
-                <div class="sale__badge">
-                  <span class="sale__oneplusone">1+1</span
-                  ><span class="sale__nice">개꿀</span
-                  ><span class="sale__comment">댓글(0)</span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="sale__item">
-          <a href="">
-            <div class="sale__redbull">
-              <div class="sale__header">
-                <span class="sale__store"> gs25 </span>
-                <span class="sale__date">08.01</span>
-                <span class="sale__category">음료</span>
-              </div>
-
-              <div class="sale__description">
-                <img class="sale__img" src="./src/assets/redbull.jpg" alt="" />
+                <picture>
+                  <source
+                    media="(max-width:799px)"
+                    type="image/webp"
+                    srcset="./src/assets/drink_monster@m.webp"
+                  />
+                  <source
+                    media="(min-width:800px)"
+                    type="image/webp"
+                    srcset="./src/assets/drink_monster.webp"
+                  />
+                  <source
+                    media="(max-width:799px)"
+                    type="image/jpg"
+                    srcset="./src/assets/drink_monster@m.jpg"
+                  />
+                  <source
+                    media="(min-width:800px)"
+                    type="image/jpg"
+                    srcset="./src/assets/drink_monster.jpg"
+                  />
+                  <img class="sale__img" src="./src/assets/drink_monster.jpg" />
+                </picture>
                 <div class="sale__product-name">
                   Y)코리안좀비에너지드링크(로우)
                 </div>
@@ -212,10 +278,10 @@
           </a>
         </li>
       </ul>
-      <a href="/sale.html" class="sale__more">더보기</a>
+      <a href="/KZ/sale.html" class="sale__more">더보기</a>
     </section>
     <footer class="footer">
-      <h1>Capain Zombie</h1>
+      <p>Capain Zombie</p>
       <address class="address">
         <span>대표 : 김현진, 박지윤, 백남헌, 유은지, 전희준</span>
       </address>
@@ -232,4 +298,23 @@
     </footer>
   </body>
   <script src="./main.js"></script>
+  <script>
+    const modal = document.querySelectorAll(".top3__item__detail");
+    const modalPopUp = (target) => {
+      if (target.classList.contains("is--active")) {
+        target.classList.remove("is--active");
+      } else {
+        target.classList.add("is--active");
+      }
+    };
+    modal.forEach((x) =>
+      x.addEventListener("click", () => {
+        if (x.classList.contains("is--active")) {
+          x.classList.remove("is--active");
+        } else {
+          x.classList.add("is--active");
+        }
+      })
+    );
+  </script>
 </html>
