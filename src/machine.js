@@ -60,7 +60,7 @@ const leftEyebrow = document.querySelector(".left .eyebrow");
 const rightEyebrow = document.querySelector(".right .eyebrow");
 
 survey_question.innerHTML = obj.questions[0][0]; // 처음 질문
-resetBtn.style.backgroundImage = `url(./src/assets/reset.jpg)`;
+resetBtn.style.backgroundImage = `url(./src/assets/reset.png)`;
 let i = 0; // 설문 번호
 let weight = [0, 0, 0, 0]; // 가중치 => 카페인: 0, 할인: 1, 칼로리: 2, 맛: 3
 let eyebrowDeg = 0;
