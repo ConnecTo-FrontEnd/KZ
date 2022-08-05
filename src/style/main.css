@@ -669,19 +669,6 @@ button {
 
 @keyframes drinkAni {
   from {
-<<<<<<< HEAD
-    transform: translate(-50%, -200%);
-  }
-  to {
-    transform: translate(-50%, -50%);
-  }
-}
-.modal {
-  display: none;
-  position: absolute;
-  background: lightgray;
-  width: 70vw;
-=======
     transform: translate(120%, -120%) rotate(90deg);
   }
   to {
@@ -708,19 +695,11 @@ button {
   border-radius: 1rem;
   width: 70vw;
   max-width: 35em;
->>>>>>> develop
   height: 70vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-<<<<<<< HEAD
-.modal .modal__close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-=======
 @media (max-width: 767px) {
   .modal {
     flex-direction: column;
@@ -783,7 +762,6 @@ button {
   color: gray;
   padding-bottom: 3px;
   border-bottom: 1px solid gray;
->>>>>>> develop
 }
 
 .machine {
@@ -795,11 +773,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 7px;
-<<<<<<< HEAD
-  background: #43ada7;
-=======
   background: #F27A9B;
->>>>>>> develop
 }
 @media (max-width: 599px) {
   .machine {
@@ -811,10 +785,7 @@ button {
   position: relative;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-=======
   justify-content: center;
->>>>>>> develop
   border-radius: 14px;
   width: 61.5em;
   height: 21.5em;
@@ -822,47 +793,31 @@ button {
   left: 50%;
   top: 5%;
   transform: translate(-50%, 0);
-<<<<<<< HEAD
-  background: linear-gradient(rgba(220, 220, 220, 0.5) 40%, rgba(84, 217, 209, 0.5) 55%, rgba(0, 0, 0, 0.3)) 51% 0%/57.1em 20em, linear-gradient(to right, rgba(220, 220, 220, 0.7) 50%, rgba(220, 220, 220, 0.7) 51%) 50.8% 100%/47.2em 1.7em, linear-gradient(to right, rgba(220, 220, 220, 0.7) 20%, rgba(217, 109, 139, 0) 65%) 97.5% 0%/0.6em 20em, linear-gradient(45deg, rgba(220, 220, 220, 0.8) 42%, rgba(220, 220, 220, 0.7) 43%, rgba(220, 220, 220, 0.7) 44.5%, rgba(0, 0, 0, 0) 45%) 54.4em 106%/15em 2.8em, linear-gradient(to right, rgba(220, 220, 220, 0.7) 20%, rgba(217, 109, 139, 0) 65%) 3.6% 0%/0.6em 20em, linear-gradient(-45deg, rgba(220, 220, 220, 0.8) 42%, rgba(220, 220, 220, 0.7) 43%, rgba(220, 220, 220, 0.7) 44.5%, rgba(217, 109, 139, 0) 45%) -7.75em 106%/15em 2.8em, rgba(255, 255, 255, 0.3);
-=======
   background: linear-gradient(rgba(220, 220, 220, 0.5) 40%, rgba(242, 122, 155, 0.5) 55%, rgba(0, 0, 0, 0.3)) 51% 0%/57.1em 20em, linear-gradient(to right, rgba(220, 220, 220, 0.7) 50%, rgba(220, 220, 220, 0.7) 51%) 50.8% 100%/47.2em 1.7em, linear-gradient(to right, rgba(220, 220, 220, 0.7) 20%, rgba(217, 109, 139, 0) 65%) 97.5% 0%/0.6em 20em, linear-gradient(45deg, rgba(220, 220, 220, 0.8) 42%, rgba(220, 220, 220, 0.7) 43%, rgba(220, 220, 220, 0.7) 44.5%, rgba(0, 0, 0, 0) 45%) 54.4em 106%/15em 2.8em, linear-gradient(to right, rgba(220, 220, 220, 0.7) 20%, rgba(217, 109, 139, 0) 65%) 3.6% 0%/0.6em 20em, linear-gradient(-45deg, rgba(220, 220, 220, 0.8) 42%, rgba(220, 220, 220, 0.7) 43%, rgba(220, 220, 220, 0.7) 44.5%, rgba(217, 109, 139, 0) 45%) -7.75em 106%/15em 2.8em, rgba(255, 255, 255, 0.3);
->>>>>>> develop
   background-repeat: no-repeat;
 }
 .machine__glass .machine__survey {
   font-size: 3.2em;
-<<<<<<< HEAD
-=======
   font-weight: bold;
->>>>>>> develop
   text-align: center;
   margin: 0 2rem;
 }
 .machine__glass .machine__reset {
   display: none;
   position: absolute;
-<<<<<<< HEAD
-  background: red;
-  padding: 1rem;
-=======
   border: none;
   background: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   width: 10em;
   height: 10em;
->>>>>>> develop
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
 }
 .machine .buttons {
-<<<<<<< HEAD
-  background: #43ada7;
-=======
   background: #F27A9B;
->>>>>>> develop
   z-index: 6;
   width: 100%;
   height: 8.5em;
@@ -880,27 +835,11 @@ button {
   }
 }
 .machine .buttons__item {
-<<<<<<< HEAD
-=======
   position: relative;
->>>>>>> develop
   width: 20%;
   height: 100%;
 }
 .machine .buttons__item__btn {
-<<<<<<< HEAD
-  height: 100%;
-  width: 100%;
-}
-.machine .buttons__item .yes {
-  background: blue;
-}
-.machine .buttons__item .no {
-  background: red;
-}
-.machine__bottom {
-  background: #43ada7;
-=======
   font-size: 3em;
   font-weight: 900;
   height: 100%;
@@ -919,7 +858,6 @@ button {
 }
 .machine__bottom {
   background: #F27A9B;
->>>>>>> develop
   position: absolute;
   width: 61.5em;
   height: 25em;
@@ -938,18 +876,6 @@ button {
   font-family: "Pacifico", cursive;
   width: 27em;
   height: 13em;
-<<<<<<< HEAD
-  border: 2px solid #43ada7;
-  border-bottom: 2px solid #87e4de;
-  position: absolute;
-  border-radius: 7px;
-  left: 25%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-top: 2px solid #2e7672;
-  border-left: 1px solid #2e7672;
-  border-right: 2px solid #2e7672;
-=======
   border: 2px solid #F27A9B;
   border-bottom: 2px solid #F27A9B;
   position: absolute;
@@ -960,7 +886,6 @@ button {
   border-top: 2px solid #F27A9B;
   border-left: 1px solid #F27A9B;
   border-right: 2px solid #F27A9B;
->>>>>>> develop
   box-shadow: inset 10px 10px 15px 8px rgba(35, 35, 35, 0.5);
   background-repeat: no-repeat;
 }
@@ -969,26 +894,12 @@ button {
     top: 67%;
   }
 }
-<<<<<<< HEAD
-.machine .slot img {
-  width: 9.5em;
-  transform: rotate(-90deg) translate(80%, -25%);
-  left: 50%;
-  position: absolute;
-  top: 50%;
-}
-=======
->>>>>>> develop
 .machine .slot:after {
   content: "";
   width: 27em;
   height: 7em;
   position: absolute;
-<<<<<<< HEAD
-  background: #43ada7;
-=======
   background: #F27A9B;
->>>>>>> develop
   top: -57.4%;
 }
 @media (max-width: 599px) {
@@ -1004,17 +915,6 @@ button {
   height: 8em;
   left: 4%;
 }
-<<<<<<< HEAD
-.machine .img img {
-  width: 18.5em;
-  transform: translate(-50%, -200%);
-  left: 50%;
-  position: absolute;
-  top: 173%;
-}
-@media (max-width: 599px) {
-  .machine .img img {
-=======
 .machine .img #soda {
   width: 7.5em;
   height: 18.5em;
@@ -1028,74 +928,12 @@ button {
 }
 @media (max-width: 599px) {
   .machine .img #soda {
->>>>>>> develop
     top: 390%;
   }
 }
 .machine .img .drinkDrop {
   animation: 0.5s cubic-bezier(0.87, 0, 0.13, 1) 0.3s drinkAni forwards;
 }
-<<<<<<< HEAD
-.machine .insert {
-  font-family: arial;
-  width: 13em;
-  height: 6em;
-  border: 2px solid #43ada7;
-  border-bottom: 2px solid #4bc3bc;
-  position: absolute;
-  border-radius: 7px;
-  left: 85%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  background: #54d9d1;
-  background-repeat: no-repeat;
-}
-@media (max-width: 599px) {
-  .machine .insert {
-    left: 75%;
-  }
-}
-.machine .insert:before {
-  content: "";
-  width: 0.8em;
-  height: 0.8em;
-  position: absolute;
-  top: 30%;
-  left: 86%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px yellowgreen, 0 0 20px yellowgreen, 0 0 30px yellowgreen, 0 0 60px yellowgreen, 0 0 70px yellowgreen;
-  background: linear-gradient(to top, limegreen, limegreen) 50% 0%/100% 100%;
-  background-repeat: no-repeat;
-}
-.machine .insert:after {
-  content: "";
-  width: 10em;
-  height: 1.2em;
-  border: 2px solid #43ada7;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(to top, #4bc3bc, #19413e) 50% 0%/100% 100%;
-  background-repeat: no-repeat;
-}
-.machine .insert .cash {
-  font-weight: bolder;
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-top: 0.6em;
-}
-
-.buttons__item button {
-  border: 0;
-  font-size: 32px;
-}
-.buttons__item button:focus {
-  outline: 3px solid yellow;
-}
-=======
->>>>>>> develop
 
 .recommend {
   background-color: white;
